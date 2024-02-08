@@ -1,0 +1,52 @@
+{
+  "collectionName": "components_carrousel_carrousel_app",
+  "info": {
+    "displayName": "Carrousel App",
+    "description": "Carrusel de productos"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "title": "Título"
+    },
+    "numberMaxOfPluShow": {
+      "type": "integer",
+      "title": "Número máximo de PLUs a mostrar"
+    },
+    "logic": {
+      "type": "enumeration",
+      "title": "Lógica Emarsys",
+      "enumNames": [
+        "También compraron",
+        "Según búsqueda",
+        "Departamento popular",
+        "Categoría",
+        "Productos relacionados",
+        "Más agregados",
+        "Productos más vistos",
+        "Me podría interesar",
+        "Más populares en categoría",
+        "Productos Frecuentes",
+        "Lista de PLUs"
+      ],
+      "enum": [
+        "f%3AALSO_BOUGHT%2Cl%3A5%2Co%3A0",
+        "f%3ASEARCH%2Cl%3A5%2Co%3A0",
+        "f%3ADEPARTMENT%2Cl%3A5%2Co%3A0",
+        "f%3ACATEGORY%2Cl%3A5%2Co%3A0",
+        "f%3ARELATED%2Cl%3A5%2Co%3A0",
+        "f%3ACART%2Cl%3A5%2Co%3A0",
+        "f%3AHOME%2Cl%3A5%2Co%3A0",
+        "f%3APERSONAL%2Cl%3A5%2Co%3A0",
+        "f%3APOPULAR%2Cl%3A5%2Co%3A0",
+        "UsualOrder",
+        ""
+      ]
+    },
+    "complement": {
+      "type": "string",
+      "title": "Complemento"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_categories_categories_pasillos_recomendados",
+  "info": {
+    "displayName": "Categories Pasillos Recomendados",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "lista_categorias": {
+      "type": "enumeration",
+      "enum": [
+        "mi descuento",
+        "vinos del mes",
+        "licores",
+        "bebidas y pasabocas",
+        "lácteos, huevos y refrigerados",
+        "despensa",
+        "carnes, pollo y pescado",
+        "frutas y verduras"
+      ],
+      "required": true
+    }
+  }
+}

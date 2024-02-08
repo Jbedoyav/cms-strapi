@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_categories_standar_categories",
+  "info": {
+    "displayName": "Standar Categories"
+  },
+  "options": {},
+  "attributes": {
+    "lista_categorias": {
+      "type": "enumeration",
+      "enum": [
+        "standar"
+      ]
+    }
+  }
+}
