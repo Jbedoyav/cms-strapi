@@ -6,12 +6,12 @@
   },
   "options": {},
   "attributes": {
-    "Carrousel": {
+    "carousel": {
       "type": "component",
       "repeatable": false,
-      "component": "carrousel.carrousel-app"
+      "component": "carousels.carouselapp"
     },
-    "Categories": {
+    "categories": {
       "type": "component",
       "repeatable": false,
       "component": "categories.categories-pasillos-recomendados"
