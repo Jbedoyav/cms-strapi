@@ -6,12 +6,51 @@
   },
   "options": {},
   "attributes": {
-    "Banners": {
+    "title": {
+      "type": "string",
+      "displayName": "Título"
+    },
+    "numberMaxOfPluShow": {
+      "type": "integer",
+      "displayName": "Número máximo de PLUs a mostrar"
+    },
+    "logicEmarsys": {
+      "type": "enumeration",
+      "enum": [
+        "También compraron",
+        "Según búsqueda",
+        "Departamento popular",
+        "Categoría",
+        "Productos relacionados",
+        "Más agregados",
+        "Productos más vistos",
+        "Me podría interesar",
+        "Más populares en categoría",
+        "Productos Frecuentes",
+        "Lista de PLUs"
+      ],
+      "enumCode": [
+        "f%3AALSO_BOUGHT%2Cl%3A5%2Co%3A0",
+        "f%3ASEARCH%2Cl%3A5%2Co%3A0",
+        "f%3ADEPARTMENT%2Cl%3A5%2Co%3A0",
+        "f%3ACATEGORY%2Cl%3A5%2Co%3A0",
+        "f%3ARELATED%2Cl%3A5%2Co%3A0",
+        "f%3ACART%2Cl%3A5%2Co%3A0",
+        "f%3AHOME%2Cl%3A5%2Co%3A0",
+        "f%3APERSONAL%2Cl%3A5%2Co%3A0",
+        "f%3APOPULAR%2Cl%3A5%2Co%3A0",
+        "UsualOrder",
+        ""
+      ]
+    },
+    "complement": {
+      "displayName": "Complemento",
+      "type": "string"
+    },
+    "listOfPlus": {
       "allowedTypes": [
         "images",
-        "files",
-        "videos",
-        "audios"
+        "videos"
       ],
       "type": "media",
       "multiple": true

@@ -6,7 +6,7 @@
   },
   "options": {},
   "attributes": {
-    "carousel": {
+    "carouselApp": {
       "type": "component",
       "repeatable": false,
       "component": "carousels.carouselapp"

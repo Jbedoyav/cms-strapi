@@ -7,7 +7,25 @@ export interface CarouselsCarouselapp extends Schema.Component {
     description: '';
   };
   attributes: {
-    Banners: Attribute.Media;
+    title: Attribute.String;
+    numberMaxOfPluShow: Attribute.Integer;
+    logicEmarsys: Attribute.Enumeration<
+      [
+        'Tambi\u00E9n compraron',
+        'Seg\u00FAn b\u00FAsqueda',
+        'Departamento popular',
+        'Categor\u00EDa',
+        'Productos relacionados',
+        'M\u00E1s agregados',
+        'Productos m\u00E1s vistos',
+        'Me podr\u00EDa interesar',
+        'M\u00E1s populares en categor\u00EDa',
+        'Productos Frecuentes',
+        'Lista de PLUs'
+      ]
+    >;
+    complement: Attribute.String;
+    listOfPlus: Attribute.Media;
   };
 }
 
@@ -52,7 +70,7 @@ export interface LadingPagesStandarLandingPage extends Schema.Component {
     description: '';
   };
   attributes: {
-    carousel: Attribute.Component<'carousels.carouselapp'>;
+    carouselApp: Attribute.Component<'carousels.carouselapp'>;
     categories: Attribute.Component<'categories.categories-pasillos-recomendados'>;
   };
 }
