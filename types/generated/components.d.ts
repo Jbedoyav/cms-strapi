@@ -1,9 +1,9 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
-export interface CarouselsCarouselapp extends Schema.Component {
-  collectionName: 'components_carousels_carouselapp';
+export interface CarouselsBannersapp extends Schema.Component {
+  collectionName: 'components_carousels_bannersapp';
   info: {
-    displayName: 'Carousel App';
+    displayName: 'Banners App';
     description: '';
   };
   attributes: {
@@ -25,7 +25,36 @@ export interface CarouselsCarouselapp extends Schema.Component {
       ]
     >;
     complement: Attribute.String;
-    listOfPlus: Attribute.Media;
+    listOfPlus: Attribute.String;
+  };
+}
+
+export interface CarouselsCarouselapp extends Schema.Component {
+  collectionName: 'components_carousels_carouselapp';
+  info: {
+    displayName: 'Carousel App';
+    description: 'Carousel App';
+  };
+  attributes: {
+    title: Attribute.String;
+    numberMaxOfPluShow: Attribute.Integer;
+    logicEmarsys: Attribute.Enumeration<
+      [
+        'Tambi\u00E9n compraron',
+        'Seg\u00FAn b\u00FAsqueda',
+        'Departamento popular',
+        'Categor\u00EDa',
+        'Productos relacionados',
+        'M\u00E1s agregados',
+        'Productos m\u00E1s vistos',
+        'Me podr\u00EDa interesar',
+        'M\u00E1s populares en categor\u00EDa',
+        'Productos Frecuentes',
+        'Lista de PLUs'
+      ]
+    >;
+    complement: Attribute.String;
+    listOfPlus: Attribute.String;
   };
 }
 
@@ -63,6 +92,25 @@ export interface CategoriesStandarCategories extends Schema.Component {
   };
 }
 
+export interface ChronometersChronometer extends Schema.Component {
+  collectionName: 'components_chronometers_chronometer';
+  info: {
+    displayName: 'Cron\u00F3metro App';
+    description: 'Cron\u00F3metro App \u00E9xito';
+  };
+  attributes: {
+    title: Attribute.String;
+    backgroundColor: Attribute.String;
+    textColor: Attribute.String;
+    showDays: Attribute.Boolean;
+    showHours: Attribute.Boolean;
+    showMinutes: Attribute.Boolean;
+    showSeconds: Attribute.Boolean;
+    startDate: Attribute.DateTime;
+    endDate: Attribute.DateTime;
+  };
+}
+
 export interface LadingPagesStandarLandingPage extends Schema.Component {
   collectionName: 'components_lading_pages_standar_landing_pages';
   info: {
@@ -71,16 +119,21 @@ export interface LadingPagesStandarLandingPage extends Schema.Component {
   };
   attributes: {
     carouselApp: Attribute.Component<'carousels.carouselapp'>;
-    categories: Attribute.Component<'categories.categories-pasillos-recomendados'>;
+    categories: Attribute.Component<
+      'categories.categories-pasillos-recomendados',
+      true
+    >;
   };
 }
 
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'carousels.bannersapp': CarouselsBannersapp;
       'carousels.carouselapp': CarouselsCarouselapp;
       'categories.categories-pasillos-recomendados': CategoriesCategoriesPasillosRecomendados;
       'categories.standar-categories': CategoriesStandarCategories;
+      'chronometers.chronometer': ChronometersChronometer;
       'lading-pages.standar-landing-page': LadingPagesStandarLandingPage;
     }
   }

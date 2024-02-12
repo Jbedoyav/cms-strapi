@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_chronometers_chronometer",
+  "info": {
+    "displayName": "Cronómetro App",
+    "description": "Cronómetro App éxito"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "displayName": "Título",
+      "type": "string"
+    },
+    "backgroundColor": {
+      "displayName": "Color Del Fondo",
+      "type": "string"
+    },
+    "textColor": {
+      "displayName": "Color Del Texto",
+      "type": "string"
+    },
+    "showDays": {
+      "type": "boolean"
+    },
+    "showHours": {
+      "type": "boolean"
+    },
+    "showMinutes": {
+      "type": "boolean"
+    },
+    "showSeconds": {
+      "type": "boolean"
+    },
+    "startDate": {
+      "type": "datetime"
+    },
+    "endDate": {
+      "type": "datetime"
+    }
+  }
+}

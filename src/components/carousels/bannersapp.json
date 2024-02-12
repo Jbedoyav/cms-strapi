@@ -1,16 +1,14 @@
 {
-  "collectionName": "components_carousels_carouselapp",
+  "collectionName": "components_carousels_bannersapp",
   "info": {
-    "displayName": "Carousel App",
-    "description": "Carousel App"
-
+    "displayName": "Banners App",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "title": {
       "type": "string",
-      "displayName": "Título",
-      "placeHolder": "Título"
+      "displayName": "Título"
     },
     "numberMaxOfPluShow": {
       "type": "integer",

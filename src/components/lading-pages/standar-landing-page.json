@@ -13,7 +13,7 @@
     },
     "categories": {
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "categories.categories-pasillos-recomendados"
     }
   }

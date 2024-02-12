@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "landing_page_1s",
+  "collectionName": "mobile_pages",
   "info": {
-    "singularName": "landing-page-1",
-    "pluralName": "landing-page-1s",
-    "displayName": "Landing Page 1",
+    "singularName": "mobile-page",
+    "pluralName": "mobile-pages",
+    "displayName": "Mobile page",
     "description": ""
   },
   "options": {
@@ -15,23 +15,25 @@
     "title": {
       "type": "string"
     },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
     "sectionCarousel": {
       "type": "dynamiczone",
       "components": [
         "carousels.carouselapp",
+        "carousels.bannersapp",
         "chronometers.chronometer"
-      ]
+      ],
+      "required": true
     },
-    "sectionCategories": {
+    "categories": {
       "type": "dynamiczone",
       "components": [
         "categories.categories-pasillos-recomendados",
         "categories.standar-categories"
       ]
-    },
-    "slug": {
-      "type": "uid",
-      "targetField": "title"
     }
   }
 }

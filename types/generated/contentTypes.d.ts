@@ -781,31 +781,40 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
-export interface ApiLandingPageLandingPage extends Schema.CollectionType {
-  collectionName: 'landing_pages';
+export interface ApiLandingPage1LandingPage1 extends Schema.CollectionType {
+  collectionName: 'landing_page_1s';
   info: {
-    singularName: 'landing-page';
-    pluralName: 'landing-pages';
-    displayName: 'Landing Page';
+    singularName: 'landing-page-1';
+    pluralName: 'landing-page-1s';
+    displayName: 'Landing Page 1';
     description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    landingPage: Attribute.DynamicZone<['lading-pages.standar-landing-page']> &
-      Attribute.Required;
+    title: Attribute.String;
+    sectionCarousel: Attribute.DynamicZone<
+      ['carousels.carouselapp', 'chronometers.chronometer']
+    >;
+    sectionCategories: Attribute.DynamicZone<
+      [
+        'categories.categories-pasillos-recomendados',
+        'categories.standar-categories'
+      ]
+    >;
+    slug: Attribute.UID<'api::landing-page-1.landing-page-1', 'title'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::landing-page.landing-page',
+      'api::landing-page-1.landing-page-1',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::landing-page.landing-page',
+      'api::landing-page-1.landing-page-1',
       'oneToOne',
       'admin::user'
     > &
@@ -813,19 +822,29 @@ export interface ApiLandingPageLandingPage extends Schema.CollectionType {
   };
 }
 
-export interface ApiLandingPage1LandingPage1 extends Schema.CollectionType {
-  collectionName: 'landing_page_1s';
+export interface ApiMobilePageMobilePage extends Schema.CollectionType {
+  collectionName: 'mobile_pages';
   info: {
-    singularName: 'landing-page-1';
-    pluralName: 'landing-page-1s';
-    displayName: 'Landing Page 1';
+    singularName: 'mobile-page';
+    pluralName: 'mobile-pages';
+    displayName: 'Mobile page';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    carrouselApp: Attribute.DynamicZone<['carousels.carouselapp']>;
-    Categories: Attribute.DynamicZone<
+    title: Attribute.String;
+    slug: Attribute.UID<'api::mobile-page.mobile-page', 'title'>;
+    sectionCarousel: Attribute.DynamicZone<
+      [
+        'carousels.carouselapp',
+        'carousels.bannersapp',
+        'chronometers.chronometer'
+      ]
+    > &
+      Attribute.Required;
+    categories: Attribute.DynamicZone<
       [
         'categories.categories-pasillos-recomendados',
         'categories.standar-categories'
@@ -835,13 +854,13 @@ export interface ApiLandingPage1LandingPage1 extends Schema.CollectionType {
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::landing-page-1.landing-page-1',
+      'api::mobile-page.mobile-page',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::landing-page-1.landing-page-1',
+      'api::mobile-page.mobile-page',
       'oneToOne',
       'admin::user'
     > &
@@ -867,8 +886,8 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
-      'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::landing-page-1.landing-page-1': ApiLandingPage1LandingPage1;
+      'api::mobile-page.mobile-page': ApiMobilePageMobilePage;
     }
   }
 }
