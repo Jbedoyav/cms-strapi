@@ -35,6 +35,11 @@
     },
     "endDate": {
       "type": "datetime"
+    },
+    "banners": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.banner"
     }
   }
 }

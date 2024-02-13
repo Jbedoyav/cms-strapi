@@ -7,25 +7,8 @@ export interface CarouselsBannersapp extends Schema.Component {
     description: '';
   };
   attributes: {
-    title: Attribute.String;
-    numberMaxOfPluShow: Attribute.Integer;
-    logicEmarsys: Attribute.Enumeration<
-      [
-        'Tambi\u00E9n compraron',
-        'Seg\u00FAn b\u00FAsqueda',
-        'Departamento popular',
-        'Categor\u00EDa',
-        'Productos relacionados',
-        'M\u00E1s agregados',
-        'Productos m\u00E1s vistos',
-        'Me podr\u00EDa interesar',
-        'M\u00E1s populares en categor\u00EDa',
-        'Productos Frecuentes',
-        'Lista de PLUs'
-      ]
-    >;
-    complement: Attribute.String;
-    listOfPlus: Attribute.String;
+    block: Attribute.Component<'carousels.carouselapp'>;
+    redirect: Attribute.Component<'cta.link', true>;
   };
 }
 
@@ -54,7 +37,7 @@ export interface CarouselsCarouselapp extends Schema.Component {
       ]
     >;
     complement: Attribute.String;
-    listOfPlus: Attribute.String;
+    images: Attribute.Media;
   };
 }
 
@@ -108,21 +91,51 @@ export interface ChronometersChronometer extends Schema.Component {
     showSeconds: Attribute.Boolean;
     startDate: Attribute.DateTime;
     endDate: Attribute.DateTime;
+    banners: Attribute.Component<'elements.banner', true>;
   };
 }
 
-export interface LadingPagesStandarLandingPage extends Schema.Component {
-  collectionName: 'components_lading_pages_standar_landing_pages';
+export interface CtaLink extends Schema.Component {
+  collectionName: 'components_cta_links';
   info: {
-    displayName: 'Standar landing page';
+    displayName: 'link';
     description: '';
   };
   attributes: {
-    carouselApp: Attribute.Component<'carousels.carouselapp'>;
-    categories: Attribute.Component<
-      'categories.categories-pasillos-recomendados',
-      true
+    title: Attribute.String;
+    isExternal: Attribute.Boolean & Attribute.DefaultTo<false>;
+    type: Attribute.Enumeration<
+      [
+        'Colecci\u00F3n',
+        'Marca',
+        'Departamento',
+        'Catergor\u00EDa',
+        'Pdp',
+        'Web View',
+        'Funcionalidad',
+        'Funcionalidad Lobby',
+        'Pdp Mi descuento',
+        'Landing'
+      ]
     >;
+    value: Attribute.String;
+    contieneAlimentos: Attribute.Boolean & Attribute.DefaultTo<false>;
+    contieneLicor: Attribute.Boolean & Attribute.DefaultTo<false>;
+    contieneTextil: Attribute.Boolean & Attribute.DefaultTo<false>;
+    loginRequerido: Attribute.Boolean;
+  };
+}
+
+export interface ElementsBanner extends Schema.Component {
+  collectionName: 'components_elements_banners';
+  info: {
+    displayName: 'Banner';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    image: Attribute.Media;
+    redirect: Attribute.Component<'cta.link'>;
   };
 }
 
@@ -134,7 +147,8 @@ declare module '@strapi/types' {
       'categories.categories-pasillos-recomendados': CategoriesCategoriesPasillosRecomendados;
       'categories.standar-categories': CategoriesStandarCategories;
       'chronometers.chronometer': ChronometersChronometer;
-      'lading-pages.standar-landing-page': LadingPagesStandarLandingPage;
+      'cta.link': CtaLink;
+      'elements.banner': ElementsBanner;
     }
   }
 }

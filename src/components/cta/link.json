@@ -1,0 +1,50 @@
+{
+  "collectionName": "components_cta_links",
+  "info": {
+    "displayName": "link",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "isExternal": {
+      "type": "boolean",
+      "default": false
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Colección",
+        "Marca",
+        "Departamento",
+        "Catergoría",
+        "Pdp",
+        "Web View",
+        "Funcionalidad",
+        "Funcionalidad Lobby",
+        "Pdp Mi descuento",
+        "Landing"
+      ]
+    },
+    "value": {
+      "type": "string"
+    },
+    "contieneAlimentos": {
+      "type": "boolean",
+      "default": false
+    },
+    "contieneLicor": {
+      "type": "boolean",
+      "default": false
+    },
+    "contieneTextil": {
+      "type": "boolean",
+      "default": false
+    },
+    "loginRequerido": {
+      "type": "boolean"
+    }
+  }
+}

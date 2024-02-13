@@ -3,7 +3,6 @@
   "info": {
     "displayName": "Carousel App",
     "description": "Carousel App"
-
   },
   "options": {},
   "attributes": {
@@ -50,10 +49,15 @@
       "displayName": "Complemento",
       "type": "string"
     },
-    "listOfPlus": {
-      "type":"string",
-      "displayName": "Lista de PLUs"
-
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }

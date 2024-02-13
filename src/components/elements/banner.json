@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_elements_banners",
+  "info": {
+    "displayName": "Banner",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "redirect": {
+      "type": "component",
+      "repeatable": false,
+      "component": "cta.link"
+    }
+  }
+}

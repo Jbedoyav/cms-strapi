@@ -836,12 +836,8 @@ export interface ApiMobilePageMobilePage extends Schema.CollectionType {
   attributes: {
     title: Attribute.String;
     slug: Attribute.UID<'api::mobile-page.mobile-page', 'title'>;
-    sectionCarousel: Attribute.DynamicZone<
-      [
-        'carousels.carouselapp',
-        'carousels.bannersapp',
-        'chronometers.chronometer'
-      ]
+    section: Attribute.DynamicZone<
+      ['carousels.carouselapp', 'chronometers.chronometer']
     > &
       Attribute.Required;
     categories: Attribute.DynamicZone<
