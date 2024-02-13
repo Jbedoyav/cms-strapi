@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_elements_text_fields",
+  "info": {
+    "displayName": "textField",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "textField": {
+      "type": "string",
+      "default": "00000"
+    }
+  }
+}

@@ -50,7 +50,7 @@ export interface CarouselsCarouselapp extends Schema.Component {
       ]
     >;
     complement: Attribute.String;
-    images: Attribute.Media;
+    listOfPlus: Attribute.Component<'elements.text-field', true>;
   };
 }
 
@@ -152,6 +152,17 @@ export interface ElementsBanner extends Schema.Component {
   };
 }
 
+export interface ElementsTextField extends Schema.Component {
+  collectionName: 'components_elements_text_fields';
+  info: {
+    displayName: 'textField';
+    description: '';
+  };
+  attributes: {
+    textField: Attribute.String & Attribute.DefaultTo<'00000'>;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -162,6 +173,7 @@ declare module '@strapi/types' {
       'chronometers.chronometer': ChronometersChronometer;
       'cta.link': CtaLink;
       'elements.banner': ElementsBanner;
+      'elements.text-field': ElementsTextField;
     }
   }
 }
