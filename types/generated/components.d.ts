@@ -1,14 +1,27 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
-export interface CarouselsBannersapp extends Schema.Component {
-  collectionName: 'components_carousels_bannersapp';
+export interface BannersBannersapp extends Schema.Component {
+  collectionName: 'components_banners_bannersapp';
   info: {
     displayName: 'Banners App';
     description: '';
   };
   attributes: {
-    block: Attribute.Component<'carousels.carouselapp'>;
-    redirect: Attribute.Component<'cta.link', true>;
+    type: Attribute.Enumeration<
+      [
+        'Colecci\u00F3n',
+        'Marca',
+        'Departamento',
+        'Catergor\u00EDa',
+        'Pdp',
+        'Web View',
+        'Funcionalidad',
+        'Funcionalidad Lobby',
+        'Pdp Mi descuento',
+        'Landing'
+      ]
+    >;
+    sliders: Attribute.Component<'elements.banner', true>;
   };
 }
 
@@ -142,7 +155,7 @@ export interface ElementsBanner extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
-      'carousels.bannersapp': CarouselsBannersapp;
+      'banners.bannersapp': BannersBannersapp;
       'carousels.carouselapp': CarouselsCarouselapp;
       'categories.categories-pasillos-recomendados': CategoriesCategoriesPasillosRecomendados;
       'categories.standar-categories': CategoriesStandarCategories;

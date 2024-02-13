@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_banners_bannersapp",
+  "info": {
+    "displayName": "Banners App",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Colección",
+        "Marca",
+        "Departamento",
+        "Catergoría",
+        "Pdp",
+        "Web View",
+        "Funcionalidad",
+        "Funcionalidad Lobby",
+        "Pdp Mi descuento",
+        "Landing"
+      ]
+    },
+    "sliders": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.banner"
+    }
+  }
+}

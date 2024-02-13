@@ -23,16 +23,12 @@
       "type": "dynamiczone",
       "components": [
         "carousels.carouselapp",
-        "chronometers.chronometer"
-      ],
-      "required": true
-    },
-    "categories": {
-      "type": "dynamiczone",
-      "components": [
+        "chronometers.chronometer",
+        "banners.bannersapp",
         "categories.categories-pasillos-recomendados",
         "categories.standar-categories"
-      ]
+      ],
+      "required": true
     }
   }
 }
