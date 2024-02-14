@@ -7,6 +7,7 @@ export interface BannersBannersapp extends Schema.Component {
     description: '';
   };
   attributes: {
+    title: Attribute.String;
     type: Attribute.Enumeration<
       [
         'Colecci\u00F3n',
@@ -135,7 +136,7 @@ export interface CtaLink extends Schema.Component {
     contieneAlimentos: Attribute.Boolean & Attribute.DefaultTo<false>;
     contieneLicor: Attribute.Boolean & Attribute.DefaultTo<false>;
     contieneTextil: Attribute.Boolean & Attribute.DefaultTo<false>;
-    loginRequerido: Attribute.Boolean;
+    loginRequerido: Attribute.Boolean & Attribute.DefaultTo<false>;
   };
 }
 
@@ -163,6 +164,20 @@ export interface ElementsTextField extends Schema.Component {
   };
 }
 
+export interface GrillasGrilla extends Schema.Component {
+  collectionName: 'components_grillas_grilla';
+  info: {
+    displayName: 'Grilla App';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    selecStyle: Attribute.Enumeration<['Cuadrado', 'Rect\u00E1ngulo']>;
+    selectColumn: Attribute.Enumeration<['1', '2', '3', '4', '5', '6']>;
+    cards: Attribute.Component<'elements.banner', true>;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -174,6 +189,7 @@ declare module '@strapi/types' {
       'cta.link': CtaLink;
       'elements.banner': ElementsBanner;
       'elements.text-field': ElementsTextField;
+      'grillas.grilla': GrillasGrilla;
     }
   }
 }

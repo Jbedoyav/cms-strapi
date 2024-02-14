@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_grillas_grilla",
+  "info": {
+    "displayName": "Grilla App",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "selecStyle": {
+      "type": "enumeration",
+      "enum": [
+        "Cuadrado",
+        "Rectángulo"
+      ]
+    },
+    "selectColumn": {
+      "type": "enumeration",
+      "enum": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.banner"
+    }
+  }
+}

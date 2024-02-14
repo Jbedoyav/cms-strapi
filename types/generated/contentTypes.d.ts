@@ -842,7 +842,8 @@ export interface ApiMobilePageMobilePage extends Schema.CollectionType {
         'chronometers.chronometer',
         'banners.bannersapp',
         'categories.categories-pasillos-recomendados',
-        'categories.standar-categories'
+        'categories.standar-categories',
+        'grillas.grilla'
       ]
     > &
       Attribute.Required;
