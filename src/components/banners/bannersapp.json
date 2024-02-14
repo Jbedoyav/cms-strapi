@@ -28,6 +28,11 @@
       "type": "component",
       "repeatable": true,
       "component": "elements.banner"
+    },
+    "emarsysID": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.emarsys-id"
     }
   }
 }

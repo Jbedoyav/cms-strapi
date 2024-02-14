@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_elements_emarsys_ids",
+  "info": {
+    "displayName": "emarsysID"
+  },
+  "options": {},
+  "attributes": {
+    "emarsysID": {
+      "type": "string"
+    }
+  }
+}

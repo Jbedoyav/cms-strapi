@@ -23,6 +23,7 @@ export interface BannersBannersapp extends Schema.Component {
       ]
     >;
     sliders: Attribute.Component<'elements.banner', true>;
+    emarsysID: Attribute.Component<'elements.emarsys-id'>;
   };
 }
 
@@ -99,10 +100,10 @@ export interface ChronometersChronometer extends Schema.Component {
     title: Attribute.String;
     backgroundColor: Attribute.String;
     textColor: Attribute.String;
-    showDays: Attribute.Boolean;
-    showHours: Attribute.Boolean;
-    showMinutes: Attribute.Boolean;
-    showSeconds: Attribute.Boolean;
+    showDays: Attribute.Boolean & Attribute.DefaultTo<true>;
+    showHours: Attribute.Boolean & Attribute.DefaultTo<true>;
+    showMinutes: Attribute.Boolean & Attribute.DefaultTo<true>;
+    showSeconds: Attribute.Boolean & Attribute.DefaultTo<true>;
     startDate: Attribute.DateTime;
     endDate: Attribute.DateTime;
     banners: Attribute.Component<'elements.banner', true>;
@@ -153,6 +154,16 @@ export interface ElementsBanner extends Schema.Component {
   };
 }
 
+export interface ElementsEmarsysId extends Schema.Component {
+  collectionName: 'components_elements_emarsys_ids';
+  info: {
+    displayName: 'emarsysID';
+  };
+  attributes: {
+    emarsysID: Attribute.String;
+  };
+}
+
 export interface ElementsTextField extends Schema.Component {
   collectionName: 'components_elements_text_fields';
   info: {
@@ -188,6 +199,7 @@ declare module '@strapi/types' {
       'chronometers.chronometer': ChronometersChronometer;
       'cta.link': CtaLink;
       'elements.banner': ElementsBanner;
+      'elements.emarsys-id': ElementsEmarsysId;
       'elements.text-field': ElementsTextField;
       'grillas.grilla': GrillasGrilla;
     }

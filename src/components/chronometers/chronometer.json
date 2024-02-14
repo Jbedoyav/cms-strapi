@@ -19,16 +19,20 @@
       "type": "string"
     },
     "showDays": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": true
     },
     "showHours": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": true
     },
     "showMinutes": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": true
     },
     "showSeconds": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": true
     },
     "startDate": {
       "type": "datetime"
