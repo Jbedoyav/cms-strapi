@@ -27,7 +27,7 @@
         "banners.bannersapp",
         "categories.categories-pasillos-recomendados",
         "categories.standar-categories",
-        "grillas.grilla"
+        "grids.grid"
       ],
       "required": true
     }

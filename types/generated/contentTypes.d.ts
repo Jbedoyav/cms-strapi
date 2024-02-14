@@ -843,7 +843,7 @@ export interface ApiMobilePageMobilePage extends Schema.CollectionType {
         'banners.bannersapp',
         'categories.categories-pasillos-recomendados',
         'categories.standar-categories',
-        'grillas.grilla'
+        'grids.grid'
       ]
     > &
       Attribute.Required;

@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_grillas_grilla",
+  "collectionName": "components_grids_grid",
   "info": {
-    "displayName": "Grilla App",
+    "displayName": "Grid App",
     "description": ""
   },
   "options": {},

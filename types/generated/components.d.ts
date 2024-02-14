@@ -175,10 +175,10 @@ export interface ElementsTextField extends Schema.Component {
   };
 }
 
-export interface GrillasGrilla extends Schema.Component {
-  collectionName: 'components_grillas_grilla';
+export interface GridsGrid extends Schema.Component {
+  collectionName: 'components_grids_grid';
   info: {
-    displayName: 'Grilla App';
+    displayName: 'Grid App';
     description: '';
   };
   attributes: {
@@ -201,7 +201,7 @@ declare module '@strapi/types' {
       'elements.banner': ElementsBanner;
       'elements.emarsys-id': ElementsEmarsysId;
       'elements.text-field': ElementsTextField;
-      'grillas.grilla': GrillasGrilla;
+      'grids.grid': GridsGrid;
     }
   }
 }
