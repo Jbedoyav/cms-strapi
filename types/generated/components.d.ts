@@ -160,7 +160,7 @@ export interface ElementsEmarsysId extends Schema.Component {
     displayName: 'emarsysID';
   };
   attributes: {
-    emarsysID: Attribute.String;
+    emarsysID: Attribute.String & Attribute.Required;
   };
 }
 
