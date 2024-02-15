@@ -797,12 +797,6 @@ export interface ApiLandingPage1LandingPage1 extends Schema.CollectionType {
     sectionCarousel: Attribute.DynamicZone<
       ['carousels.carouselapp', 'chronometers.chronometer']
     >;
-    sectionCategories: Attribute.DynamicZone<
-      [
-        'categories.categories-pasillos-recomendados',
-        'categories.standar-categories'
-      ]
-    >;
     slug: Attribute.UID<'api::landing-page-1.landing-page-1', 'title'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;

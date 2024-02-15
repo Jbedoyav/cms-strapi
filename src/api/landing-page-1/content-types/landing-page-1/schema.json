@@ -22,13 +22,6 @@
         "chronometers.chronometer"
       ]
     },
-    "sectionCategories": {
-      "type": "dynamiczone",
-      "components": [
-        "categories.categories-pasillos-recomendados",
-        "categories.standar-categories"
-      ]
-    },
     "slug": {
       "type": "uid",
       "targetField": "title"
