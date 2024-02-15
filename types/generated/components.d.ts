@@ -56,40 +56,6 @@ export interface CarouselsCarouselapp extends Schema.Component {
   };
 }
 
-export interface CategoriesCategoriesPasillosRecomendados
-  extends Schema.Component {
-  collectionName: 'components_categories_categories_pasillos_recomendados';
-  info: {
-    displayName: 'Categories Pasillos Recomendados';
-    description: '';
-  };
-  attributes: {
-    lista_categorias: Attribute.Enumeration<
-      [
-        'mi descuento',
-        'vinos del mes',
-        'licores',
-        'bebidas y pasabocas',
-        'l\u00E1cteos, huevos y refrigerados',
-        'despensa',
-        'carnes, pollo y pescado',
-        'frutas y verduras'
-      ]
-    > &
-      Attribute.Required;
-  };
-}
-
-export interface CategoriesStandarCategories extends Schema.Component {
-  collectionName: 'components_categories_standar_categories';
-  info: {
-    displayName: 'Standar Categories';
-  };
-  attributes: {
-    listOfcategories: Attribute.Enumeration<['standar']>;
-  };
-}
-
 export interface ChronometersChronometer extends Schema.Component {
   collectionName: 'components_chronometers_chronometer';
   info: {
@@ -194,8 +160,6 @@ declare module '@strapi/types' {
     export interface Components {
       'banners.bannersapp': BannersBannersapp;
       'carousels.carouselapp': CarouselsCarouselapp;
-      'categories.categories-pasillos-recomendados': CategoriesCategoriesPasillosRecomendados;
-      'categories.standar-categories': CategoriesStandarCategories;
       'chronometers.chronometer': ChronometersChronometer;
       'cta.link': CtaLink;
       'elements.banner': ElementsBanner;

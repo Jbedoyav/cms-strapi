@@ -841,8 +841,6 @@ export interface ApiMobilePageMobilePage extends Schema.CollectionType {
         'carousels.carouselapp',
         'chronometers.chronometer',
         'banners.bannersapp',
-        'categories.categories-pasillos-recomendados',
-        'categories.standar-categories',
         'grids.grid'
       ]
     > &
